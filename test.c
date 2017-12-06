@@ -14,7 +14,7 @@ void testfn_caller(double (* fn)(double), char *fname, double x, double ex) {
     double diff, res;
     res = fn(x);
     diff = fabs(ex - res);
-    printf("fn: %s\tin: %12E\tres: %12E\tdiff: %12E\n", fname, x, res, diff);
+    printf("fn: %s\tin: %12E\tres: %20.16E\tdiff: %20.16E\n", fname, x, res, diff);
     if (!isnan(diff)) {
         testfn_calls++;
         diff_abs_sum += diff;
@@ -69,5 +69,5 @@ int main() {
     testfn_caller(&asin, "asin()",  M_PI_2, NAN);
     testfn_caller(&acos, "acos()",  M_PI_2, NAN);
     testfn_caller(&atan, "atan()",  M_PI_2, 1.0038848218538872141484239449171);
-    printf("Average error: %LE\n", diff_abs_sum / testfn_calls);
+    printf("Average error: %20.16LE\n", diff_abs_sum / testfn_calls);
 }
