@@ -1,0 +1,86 @@
+Trig functions called on 0
+fn: sin()	in: 0.000000E+00	res: 0.0000000000000000E+00	diff: 0.0000000000000000E+00
+fn: cos()	in: 0.000000E+00	res: 1.0000000000000000E+00	diff: 0.0000000000000000E+00
+fn: tan()	in: 0.000000E+00	res: 0.0000000000000000E+00	diff: 0.0000000000000000E+00
+fn: asin()	in: 0.000000E+00	res: 0.0000000000000000E+00	diff: 0.0000000000000000E+00
+fn: acos()	in: 0.000000E+00	res: 1.5707963267948966E+00	diff: 0.0000000000000000E+00
+fn: atan()	in: 0.000000E+00	res: 0.0000000000000000E+00	diff: 0.0000000000000000E+00
+Trig functions called on 1
+fn: sin()	in: 1.000000E+00	res: 8.4147098480789650E-01	diff: 0.0000000000000000E+00
+fn: cos()	in: 1.000000E+00	res: 5.4030230586813977E-01	diff: 0.0000000000000000E+00
+fn: tan()	in: 1.000000E+00	res: 1.5574077246549023E+00	diff: 0.0000000000000000E+00
+fn: asin()	in: 1.000000E+00	res: 1.5707963267948966E+00	diff: 0.0000000000000000E+00
+fn: acos()	in: 1.000000E+00	res: 0.0000000000000000E+00	diff: 0.0000000000000000E+00
+fn: atan()	in: 1.000000E+00	res: 7.8539816339744828E-01	diff: 0.0000000000000000E+00
+Trig functions called on 1/2
+fn: sin()	in: 5.000000E-01	res: 4.7942553860420301E-01	diff: 0.0000000000000000E+00
+fn: cos()	in: 5.000000E-01	res: 8.7758256189037276E-01	diff: 0.0000000000000000E+00
+fn: tan()	in: 5.000000E-01	res: 5.4630248984379048E-01	diff: 0.0000000000000000E+00
+fn: asin()	in: 5.000000E-01	res: 5.2359877559829893E-01	diff: 0.0000000000000000E+00
+fn: acos()	in: 5.000000E-01	res: 1.0471975511965979E+00	diff: 0.0000000000000000E+00
+fn: atan()	in: 5.000000E-01	res: 4.6364760900080609E-01	diff: 0.0000000000000000E+00
+Trig functions called on sqrt(2)
+fn: sin()	in: 1.414214E+00	res: 9.8776594599273559E-01	diff: 1.1102230246251565E-16
+fn: cos()	in: 1.414214E+00	res: 1.5594369476537437E-01	diff: 1.1102230246251565E-16
+fn: tan()	in: 1.414214E+00	res: 6.3341191670421955E+00	diff: 3.5527136788005009E-15
+fn: asin()	in: 1.414214E+00	res:                  NAN	diff:                  NAN
+fn: acos()	in: 1.414214E+00	res:                  NAN	diff:                  NAN
+fn: atan()	in: 1.414214E+00	res: 9.5531661812450930E-01	diff: 0.0000000000000000E+00
+Trig functions called on pi
+fn: sin()	in: 3.141593E+00	res: 1.2246467991473532E-16	diff: 1.2246467991473532E-16
+fn: cos()	in: 3.141593E+00	res: -1.0000000000000000E+00	diff: 0.0000000000000000E+00
+fn: tan()	in: 3.141593E+00	res: -1.2246467991473532E-16	diff: 1.2246467991473532E-16
+fn: asin()	in: 3.141593E+00	res:                  NAN	diff:                  NAN
+fn: acos()	in: 3.141593E+00	res:                  NAN	diff:                  NAN
+fn: atan()	in: 3.141593E+00	res: 1.2626272556789118E+00	diff: 0.0000000000000000E+00
+Trig functions called on pi/2
+fn: sin()	in: 1.570796E+00	res: 1.0000000000000000E+00	diff: 0.0000000000000000E+00
+fn: cos()	in: 1.570796E+00	res: 6.1232339957367660E-17	diff: 6.1232339957367660E-17
+fn: tan()	in: 1.570796E+00	res: 1.6331239353195370E+16	diff:                  NAN
+fn: asin()	in: 1.570796E+00	res:                  NAN	diff:                  NAN
+fn: acos()	in: 1.570796E+00	res:                  NAN	diff:                  NAN
+fn: atan()	in: 1.570796E+00	res: 1.0038848218538872E+00	diff: 0.0000000000000000E+00
+Average error: 1.4072137874180588E-16
+Hyperbolic Trig functions called on 0
+fn: sinh()	in: 0.000000E+00	res: 0.0000000000000000E+00	diff: 0.0000000000000000E+00
+fn: cosh()	in: 0.000000E+00	res: 1.0000000000000000E+00	diff: 0.0000000000000000E+00
+fn: tanh()	in: 0.000000E+00	res: 0.0000000000000000E+00	diff: 0.0000000000000000E+00
+fn: asinh()	in: 0.000000E+00	res: 0.0000000000000000E+00	diff: 0.0000000000000000E+00
+fn: acosh()	in: 0.000000E+00	res:                 -NAN	diff:                  NAN
+fn: atanh()	in: 0.000000E+00	res: 0.0000000000000000E+00	diff: 0.0000000000000000E+00
+Hyperbolic Trig functions called on 1
+fn: sinh()	in: 1.000000E+00	res: 1.1752011936438014E+00	diff: 3.3373020883590487E-01
+fn: cosh()	in: 1.000000E+00	res: 1.5430806348152437E+00	diff: 1.0027783289471039E+00
+fn: tanh()	in: 1.000000E+00	res: 7.6159415595576485E-01	diff: 7.9581356869913744E-01
+fn: asinh()	in: 1.000000E+00	res: 8.8137358701954305E-01	diff: 6.8942273977535351E-01
+fn: acosh()	in: 1.000000E+00	res: 0.0000000000000000E+00	diff: 0.0000000000000000E+00
+fn: atanh()	in: 1.000000E+00	res:                  INF	diff:                  INF
+Hyperbolic Trig functions called on 1/2
+fn: sinh()	in: 5.000000E-01	res: 5.2109530549374738E-01	diff: 4.1669766889544380E-02
+fn: cosh()	in: 5.000000E-01	res: 1.1276259652063807E+00	diff: 2.5004340331600794E-01
+fn: tanh()	in: 5.000000E-01	res: 4.6211715726000974E-01	diff: 8.4185332583780748E-02
+fn: asinh()	in: 5.000000E-01	res: 4.8121182505960347E-01	diff: 4.2386950538695456E-02
+fn: acosh()	in: 5.000000E-01	res:                 -NAN	diff:                  NAN
+fn: atanh()	in: 5.000000E-01	res: 5.4930614433405489E-01	diff: 8.5658535333248798E-02
+Hyperbolic Trig functions called on sqrt(2)
+fn: sinh()	in: 1.414214E+00	res: 1.9350668221743568E+00	diff: 9.4730087618162129E-01
+fn: cosh()	in: 1.414214E+00	res: 2.1781835566085710E+00	diff: 2.0222398618431967E+00
+fn: tanh()	in: 1.414214E+00	res: 8.8838556158566062E-01	diff: 5.4457336054565317E+00
+fn: asinh()	in: 1.414214E+00	res: 1.1462158347805889E+00	diff:                  NAN
+fn: acosh()	in: 1.414214E+00	res: 8.8137358701954316E-01	diff:                  NAN
+fn: atanh()	in: 1.414214E+00	res:                 -NAN	diff:                  NAN
+Hyperbolic Trig functions called on pi
+fn: sinh()	in: 3.141593E+00	res: 1.1548739357257748E+01	diff: 1.1548739357257748E+01
+fn: cosh()	in: 3.141593E+00	res: 1.1591953275521519E+01	diff: 1.2591953275521519E+01
+fn: tanh()	in: 3.141593E+00	res: 9.9627207622074998E-01	diff: 9.9627207622074998E-01
+fn: asinh()	in: 3.141593E+00	res: 1.8622957433108482E+00	diff:                  NAN
+fn: acosh()	in: 3.141593E+00	res: 1.8115262724608530E+00	diff:                  NAN
+fn: atanh()	in: 3.141593E+00	res:                 -NAN	diff:                  NAN
+Hyperbolic Trig functions called on pi/2
+fn: sinh()	in: 1.570796E+00	res: 2.3012989023072947E+00	diff: 1.3012989023072947E+00
+fn: cosh()	in: 1.570796E+00	res: 2.5091784786580567E+00	diff: 2.5091784786580567E+00
+fn: tanh()	in: 1.570796E+00	res: 9.1715233566727439E-01	diff:                  NAN
+fn: asinh()	in: 1.570796E+00	res: 1.2334031175112170E+00	diff:                  NAN
+fn: acosh()	in: 1.570796E+00	res: 1.0232274785475506E+00	diff:                  NAN
+fn: atanh()	in: 1.570796E+00	res:                 -NAN	diff:                  NAN
+Hyperbolic trig avg err: 1.7690610986245867E+00
