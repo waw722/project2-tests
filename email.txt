@@ -1,0 +1,30 @@
+Hi all,
+
+This patch to softfloat is intended to be the first in a series to add better
+support for 80-bit extended precision floating point operations. These patches
+will fix the inaccuracies found in target/i386's x87 fpu emulation.
+
+links:
+
+
+Context:
+
+Currently many of x87 instructions in the i386 emulator are translating
+Floatx80 to double then calling into host's math library, and finally back to
+Floatx80. Significant accuracy is lost during this process compared to real x87
+hardware. For transcendental trig functions that use x87 instructions for
+intermediate calculations, as much as 9 decimal places of accuracy is lost
+compared to hardware.
+
+
+Solution:
+
+Most functions in these patches were ported by Laurent Vivier from functions
+written by Andreas Grabher for Previous. The next section will explain the
+licensing issues.
+
+These functions performs the corresponding operation using Floatx80 without
+rounding to double. The algorithms used in these implementaions can be found
+here: 
+
+
