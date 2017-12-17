@@ -4,7 +4,7 @@ This patch to softfloat is intended to be the first in a series to add better
 support for 80-bit extended precision floating point operations. These patches
 will fix the inaccuracies found in target/i386's x87 fpu emulation.
 
-links:
+links: https://bugs.launchpad.net/qemu/+bug/645662
 
 
 Context:
@@ -19,12 +19,52 @@ compared to hardware.
 
 Solution:
 
-Most functions in these patches were ported by Laurent Vivier from functions
+We need to either implement extended precision floating point arithmetic
+from scratch which is non trivial, or find an existing math library to use.
+
+Writing these procedures are non trivial, and the functions for Floatx80
+already exist. So the main issue so far has been to determine if we are allowed
+to use these code.
+
+Most functions in these patches are ported by Laurent Vivier from functions
 written by Andreas Grabher for Previous. The next section will explain the
 licensing issues.
 
 These functions performs the corresponding operation using Floatx80 without
-rounding to double. The algorithms used in these implementaions can be found
-here: 
+rounding down to double. The algorithms used in these implementaions can be
+found here:
+https://ftp.netbsd.org/pub/NetBSD/NetBSD-current/src/sys/arch/m68k/fpsp/l_fpsp.h
+(https://lists.gnu.org/archive/html/qemu-devel/2017-12/msg00749.html) author's
+email.
+
+
+Licensing:
+
+discussion of license:
+https://lists.gnu.org/archive/html/qemu-devel/2017-11/msg05342.html
+
+When Laurent first sent the patches out, he referenced Andreas's code but did
+not know from which asm library of l_fpsp he based the C code off of. So far we
+have found two version: 
+
+Later, Andreas was included as a CC in the emails and he confirmed that he
+based his C library off of NetBSD verions, which people believed as GPL
+compatible.
+
+liscense of the netBSD:
+
+<liscence>
+
+
+This code was then ported over by Laurent. There are other libraries using very
+similar code under either softfloat 1a or 2b, 
+very similar to these 
+
+Since its m68k asm, the most important part is the algorithm.
+
+
+None of the softfloat releases come with the more complex Floatx80 operations
+found in these patch. Also since all of the releases are pretty much identical
+except for liscence headers, I believe we are OK.
 
 
