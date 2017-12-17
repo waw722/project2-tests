@@ -2,7 +2,8 @@ Hi all,
 
 This patch to softfloat is intended to be the first in a series to add better
 support for 80-bit extended precision floating point operations. These patches
-will fix the inaccuracies found in target/i386's x87 fpu emulation.
+will allow the inaccuracies found in target/i386's x87 fpu emulation to be
+fixed.
 
 links: https://bugs.launchpad.net/qemu/+bug/645662
 
@@ -10,8 +11,8 @@ links: https://bugs.launchpad.net/qemu/+bug/645662
 Context:
 
 Currently many of x87 instructions in the i386 emulator are translating
-Floatx80 to double then calling into host's math library, and finally back to
-Floatx80. Significant accuracy is lost during this process compared to real x87
+floatx80 to double then calling into host's math library, and finally back to
+floatx80. Significant accuracy is lost during this process compared to real x87
 hardware. For transcendental trig functions that use x87 instructions for
 intermediate calculations, as much as 9 decimal places of accuracy is lost
 compared to hardware.
@@ -19,10 +20,10 @@ compared to hardware.
 
 Solution:
 
-We need to either implement extended precision floating point arithmetic
-from scratch which is non trivial, or find an existing math library to use.
+We needed to either implement extended precision floating point arithmetic from
+scratch which is non trivial, or find an existing math library to use.
 
-Writing these procedures are non trivial, and the functions for Floatx80
+Writing these procedures are non trivial, and the functions for floatx80
 already exist. So the main issue so far has been to determine if we are allowed
 to use these code.
 
@@ -30,7 +31,7 @@ Most functions in these patches are ported by Laurent Vivier from functions
 written by Andreas Grabher for Previous. The next section will explain the
 licensing issues.
 
-These functions performs the corresponding operation using Floatx80 without
+These functions performs the corresponding operation using floatx80 without
 rounding down to double. The algorithms used in these implementaions can be
 found here:
 https://ftp.netbsd.org/pub/NetBSD/NetBSD-current/src/sys/arch/m68k/fpsp/l_fpsp.h
@@ -47,24 +48,26 @@ When Laurent first sent the patches out, he referenced Andreas's code but did
 not know from which asm library of l_fpsp he based the C code off of. So far we
 have found two version: 
 
+Since its m68k asm, the most important part is the algorithm.
+
+
 Later, Andreas was included as a CC in the emails and he confirmed that he
 based his C library off of NetBSD verions, which people believed as GPL
 compatible.
 
 liscense of the netBSD:
 
-<liscence>
+<license>
 
 
 This code was then ported over by Laurent. There are other libraries using very
 similar code under either softfloat 1a or 2b, 
-very similar to these 
+very similar to these. I suspect they are all connected one way or another back
+to Andrea's code. 
 
-Since its m68k asm, the most important part is the algorithm.
 
-
-None of the softfloat releases come with the more complex Floatx80 operations
+None of the softfloat releases come with the more complex floatx80 operations
 found in these patch. Also since all of the releases are pretty much identical
-except for liscence headers, I believe we are OK.
+except for license headers, I believe we are OK using Laurent's code in 1a.
 
 
